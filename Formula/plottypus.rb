@@ -16,6 +16,11 @@ class Plottypus < Formula
     end
   end
 
+  bottle do
+    root_url "https://github.com/CLoaKY233/plottypus/releases/download/v1.0.0"
+    sha256 cellar: :any_skip_relocation, all: "097bdc884789742b8c0fb2dae0587c2b44cfebeef149189ca288212fafeabb74"
+  end
+
   depends_on arch: :arm64
   depends_on :macos
 
