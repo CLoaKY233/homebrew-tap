@@ -3,10 +3,10 @@
 class Plottypus < Formula
   desc "Apple Silicon system monitor for the terminal: watts, clocks and temperatures"
   homepage "https://plottypus.com"
-  url "https://github.com/CLoaKY233/plottypus/releases/download/v1.0.0/plottypus-v1.0.0-macos-arm64.tar.gz"
+  url "https://github.com/CLoaKY233/plottypus/releases/download/v1.1.0/plottypus-v1.1.0-macos-arm64.tar.gz"
   # Brew would scan "64" out of "arm64" in the file name, so the version is explicit.
-  version "1.0.0"
-  sha256 "89cdc2d1993dde0607d942103f393fb5bda6b38e1666ef96c3534d2c56e59f9b"
+  version "1.1.0"
+  sha256 "4d329aa1d011cb3f7ab099f9d97bc7f758e16b3ef4c12c35b7087b107db33402"
   license :cannot_represent
 
   livecheck do
@@ -17,8 +17,8 @@ class Plottypus < Formula
   end
 
   bottle do
-    root_url "https://github.com/CLoaKY233/plottypus/releases/download/v1.0.0"
-    sha256 cellar: :any_skip_relocation, all: "097bdc884789742b8c0fb2dae0587c2b44cfebeef149189ca288212fafeabb74"
+    root_url "https://github.com/CLoaKY233/plottypus/releases/download/v1.1.0"
+    sha256 cellar: :any_skip_relocation, all: "d8a833ecd30a7c7a8185e259b16abc56e0d7a7de76e6e33a2841185e4fbbde02"
   end
 
   depends_on arch: :arm64
@@ -32,7 +32,8 @@ class Plottypus < Formula
 
   def caveats
     <<~EOS
-      plottypus reads everything it shows without sudo and never uses the network.
+      plottypus reads everything it shows without sudo. Its only network request is an
+      optional daily update check, off unless you turn it on during onboarding.
       `plottypus doctor` shows what this Mac exposes; `plottypus --demo` plays a
       canned 60 s session.
     EOS
