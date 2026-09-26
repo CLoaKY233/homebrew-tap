@@ -3,10 +3,10 @@
 class Plottypus < Formula
   desc "Apple Silicon system monitor for the terminal: watts, clocks and temperatures"
   homepage "https://plottypus.com"
-  url "https://github.com/CLoaKY233/plottypus/releases/download/v1.1.0/plottypus-v1.1.0-macos-arm64.tar.gz"
+  url "https://github.com/CLoaKY233/plottypus/releases/download/v1.1.1/plottypus-v1.1.1-macos-arm64.tar.gz"
   # Brew would scan "64" out of "arm64" in the file name, so the version is explicit.
-  version "1.1.0"
-  sha256 "4d329aa1d011cb3f7ab099f9d97bc7f758e16b3ef4c12c35b7087b107db33402"
+  version "1.1.1"
+  sha256 "060ebe23ef00dee6a22bb218159fc0085c4a925168a8836b7c5f6d943e41cadd"
   license :cannot_represent
 
   livecheck do
@@ -16,9 +16,10 @@ class Plottypus < Formula
     end
   end
 
+
   bottle do
-    root_url "https://github.com/CLoaKY233/plottypus/releases/download/v1.1.0"
-    sha256 cellar: :any_skip_relocation, all: "d8a833ecd30a7c7a8185e259b16abc56e0d7a7de76e6e33a2841185e4fbbde02"
+    root_url "https://github.com/CLoaKY233/plottypus/releases/download/v1.1.1"
+    sha256 cellar: :any_skip_relocation, all: "3925ee5a58dfe81d0672119b0e8629acae13fe51aa6b5031620b2d63b51db154"
   end
 
   depends_on arch: :arm64
